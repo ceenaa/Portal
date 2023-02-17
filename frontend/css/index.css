@@ -1,0 +1,212 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "IranSans";
+  src: url(../fonts/IRANSans/IRANSans_Medium.ttf);
+}
+/* Start Default Styles */
+*,
+*::after,
+*::before {
+  outline: none;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+html body {
+  line-height: 1.6;
+  font-size: 1.6rem;
+  font-family: "IranSans";
+  direction: rtl;
+  background-color: #141e2f;
+  color: #fff;
+}
+html body a {
+  text-decoration: none;
+  color: #464749;
+  transition: all 400ms ease;
+}
+html body a:hover {
+  color: #1e83f0;
+}
+html body i {
+  user-select: none;
+}
+
+/* Finish Default Styles */
+/* Start Header Style */
+.header {
+  padding: 1rem 0;
+  margin-bottom: 2rem;
+  box-shadow: 0px 0px 1500px rgba(255, 242, 0, 0.7);
+  width: 100%;
+}
+.header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+.header .navbar .navbar__right .navbar__right-icon-container {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .header .navbar .navbar__right .navbar__right-icon-container {
+    display: flex;
+  }
+}
+.header .navbar .navbar__right .navbar__right-icon-container.open {
+  color: #1e83f0;
+}
+.header .navbar .navbar__right .navbar__right-links {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
+.header .navbar .navbar__right .navbar__right-links .navbar__right-link-container {
+  padding: 0 2rem;
+}
+.header .navbar .navbar__right .navbar__right-links .navbar__right-link-container .navbar__right-link {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.header .navbar .navbar__right .navbar__right-links .navbar__right-link-container .navbar__right-link:hover {
+  color: #1e83f0;
+}
+@media screen and (max-width: 768px) {
+  .header .navbar .navbar__right .navbar__right-links .navbar__right-link-container {
+    padding: 0.9rem 2rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header .navbar .navbar__right .navbar__right-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: -100%;
+    top: 4.2rem;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(255, 242, 0, 0.208);
+    background: linear-gradient(90deg, #141e2f, rgba(72, 68, 1, 0.9098039216));
+  }
+}
+.header .navbar .navbar__right .navbar__right-links.open {
+  right: 0rem;
+}
+.header .navbar .navBar__left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .navbar .navBar__left .navbar__left-logo .navbar__left-logo-link {
+  color: #b7be5b;
+  font-size: 2rem;
+}
+.header .navbar .navBar__left .navbar__left-logo .navbar__left-logo-link:hover {
+  color: #1e83f0;
+}
+
+/* Finish Header Style */
+/* Start Table Styles */
+.tables .tables__table .tables__table-row-header .tables__table-header-exam, .tables .tables__table .tables__table-row-header .tables__table-header-time2, .tables .tables__table .tables__table-row-header .tables__table-header-time1, .tables .tables__table .tables__table-row-header .tables__table-header-teacher, .tables .tables__table .tables__table-row-header .tables__table-header-capacity, .tables .tables__table .tables__table-row-header .tables__table-header-group, .tables .tables__table .tables__table-row-header .tables__table-header-vahed, .tables .tables__table .tables__table-row-header .tables__table-header-code, .tables .tables__table .tables__table-row-header .tables__table-header-title, .tables .tables__table .tables__table-row-header .tables__table-header-checkbox {
+  border-left: 2px solid #fff;
+  text-align: center;
+  color: #b7be5b;
+}
+
+.tables .tables__table .tables__table-row .tables__table-exam, .tables .tables__table .tables__table-row .tables__table-time2, .tables .tables__table .tables__table-row .tables__table-time1, .tables .tables__table .tables__table-row .tables__table-teacher, .tables .tables__table .tables__table-row .tables__table-capacity, .tables .tables__table .tables__table-row .tables__table-group, .tables .tables__table .tables__table-row .tables__table-vahed, .tables .tables__table .tables__table-row .tables__table-code, .tables .tables__table .tables__table-row .tables__table-title, .tables .tables__table .tables__table-row .tables__table-checkbox {
+  border-left: 2px solid #fff;
+  text-align: center;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.tables {
+  margin: 0 2rem;
+}
+.tables .tables__table {
+  width: 100%;
+  overflow-y: auto;
+}
+.tables .tables__table .tables__table-row-header {
+  width: 100%;
+  border: 2px solid #fff;
+}
+.tables .tables__table .tables__table-row-header .tables__table-header-checkbox {
+  padding: 1rem;
+}
+.tables .tables__table .tables__table-row-header .tables__table-header-vahed {
+  padding: 1rem;
+}
+.tables .tables__table .tables__table-row-header .tables__table-header-group {
+  padding: 1rem;
+}
+.tables .tables__table .tables__table-row-header .tables__table-header-capacity {
+  padding: 1rem;
+}
+.tables .tables__table .tables__table-row {
+  border: 2px solid #fff;
+}
+.tables .tables__table .tables__table-row .tables__table-checkbox {
+  padding: 1rem;
+}
+.tables .tables__table .tables__table-row .tables__table-checkbox .tables__table-input {
+  margin: 0 auto;
+  cursor: pointer;
+}
+/* Finish Table Styles */
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,122 @@
+/* Start Table Styles */
+%Header-Cell {
+	border-left: 2px solid $white-color;
+	text-align: center;
+	color: $primary-color;
+}
+
+%Main-Cell {
+	border-left: 2px solid $white-color;
+	text-align: center;
+	color: $white-color;
+	font-size: 1.3rem;
+}
+
+.tables {
+	margin: 0 2rem;
+
+	.tables__table {
+		width: 100%;
+		overflow-y: auto;
+
+		.tables__table-row-header {
+			width: 100%;
+			border: 2px solid $white-color;
+
+			.tables__table-header-checkbox {
+				padding: 1rem;
+				@extend %Header-Cell;
+			}
+
+			.tables__table-header-title {
+				@extend %Header-Cell;
+			}
+
+			.tables__table-header-code {
+				@extend %Header-Cell;
+			}
+
+			.tables__table-header-vahed {
+				padding: 1rem;
+				@extend %Header-Cell;
+			}
+
+			.tables__table-header-group {
+				padding: 1rem;
+				@extend %Header-Cell;
+			}
+
+			.tables__table-header-capacity {
+				padding: 1rem;
+				@extend %Header-Cell;
+			}
+
+			.tables__table-header-teacher {
+				@extend %Header-Cell;
+			}
+
+			.tables__table-header-time1 {
+				@extend %Header-Cell;
+			}
+
+			.tables__table-header-time2 {
+				@extend %Header-Cell;
+			}
+
+			.tables__table-header-exam {
+				@extend %Header-Cell;
+			}
+		}
+
+		.tables__table-row {
+			border: 2px solid $white-color;
+
+			.tables__table-checkbox {
+				padding: 1rem;
+				@extend %Main-Cell;
+
+				.tables__table-input {
+					margin: 0 auto;
+                    cursor: pointer;
+				}
+			}
+
+			.tables__table-title {
+				@extend %Main-Cell;
+			}
+
+			.tables__table-code {
+				@extend %Main-Cell;
+			}
+
+			.tables__table-vahed {
+				@extend %Main-Cell;
+			}
+
+			.tables__table-group {
+				@extend %Main-Cell;
+			}
+
+			.tables__table-capacity {
+				@extend %Main-Cell;
+			}
+
+			.tables__table-teacher {
+				@extend %Main-Cell;
+			}
+
+			.tables__table-time1 {
+				@extend %Main-Cell;
+			}
+
+			.tables__table-time2 {
+				@extend %Main-Cell;
+			}
+
+			.tables__table-exam {
+				@extend %Main-Cell;
+			}
+		}
+	}
+}
+/* Finish Table Styles */

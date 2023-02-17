@@ -1,0 +1,38 @@
+/* Start Default Styles */
+
+*,
+*::after,
+*::before {
+	outline: none;
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+
+	body {
+		line-height: 1.6;
+		font-size: 1.6rem;
+		font-family: $primary-font;
+		direction: rtl;
+		background-color: $midnight-blue;
+		color: $white-color;
+
+		a {
+			text-decoration: none;
+			color: $dark-color;
+			transition: all 400ms ease;
+
+			&:hover {
+				color: $link-hover;
+			}
+		}
+
+		i {
+			user-select: none;
+		}
+	}
+}
+
+/* Finish Default Styles */
