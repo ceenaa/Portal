@@ -13,7 +13,6 @@ class Time(models.Model):
 
 
 class Course(models.Model):
-    id = models.ImageField
     name = models.CharField(max_length=100)
     teacher = models.CharField(max_length=100)
     code = models.CharField(max_length=100)
@@ -23,3 +22,10 @@ class Course(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class ChosenCourse(models.Model):
+    course = models.ForeignKey(Course, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.course.name + " " + self.course.group

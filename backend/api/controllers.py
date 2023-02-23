@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
-from .models import Course, Time
+from .models import Course, Time, ChosenCourse
 
 
 def extractTime(txt):
@@ -57,7 +57,6 @@ def crawl(request):
         cts = [ct1]
 
         if allTds[i + 9].text != "":
-
             ct2 = Time.objects.create(
                 day=extractDay(allTds[i + 9].text),
                 start_time=extractTime(allTds[i + 9].text)[1],
@@ -89,3 +88,27 @@ def crawl(request):
         c.class_times.set(cts)
         c.save()
     return JsonResponse({'message': 'crawl done'})
+
+
+def checkCoherence(c):
+
+    chosenCourses = ChosenCourse.objects.all()
+    if c in chosenCourses:
+        return False
+    for cc in chosenCourses:
+
+        if cc.course.exam_time.day == c.exam_time.day:
+            if cc.course.exam_time.start_time <= c.exam_time.start_time < cc.course.exam_time.end_time:
+                return False
+            if cc.course.exam_time.start_time < c.exam_time.end_time <= cc.course.exam_time.end_time:
+                return False
+
+        for cct in cc.course.class_times.all():
+            for ct in c.class_times.all():
+                if cct.day == ct.day:
+                    if cct.start_time <= ct.start_time < cct.end_time:
+                        return False
+                    if cct.start_time < ct.end_time <= cct.end_time:
+                        return False
+
+    return True
