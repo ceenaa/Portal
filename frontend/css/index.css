@@ -88,7 +88,6 @@ html body i {
 /* Start Header Style */
 .header {
   padding: 1rem 0;
-  margin-bottom: 2rem;
   box-shadow: 0px 0px 1500px rgba(255, 242, 0, 0.7);
   width: 100%;
 }
@@ -210,12 +209,11 @@ html body i {
 }
 /* Finish Table Styles */
 .refresh {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+  text-align: left;
 }
 .refresh .refresh__btn {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  display: inline-block;
 }
 .refresh .refresh__btn .refresh__btn-icon {
   cursor: pointer;

@@ -6,12 +6,11 @@
 @import "table";
 
 .refresh {
-    margin-bottom: 1rem;
+    margin: 1rem 0;
+    text-align: left;
 
     .refresh__btn {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
+        display: inline-block;
 
         .refresh__btn-icon {
             cursor: pointer;
