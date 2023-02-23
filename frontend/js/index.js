@@ -22,12 +22,11 @@ checkboxContainer.forEach((e) => {
 	});
 });
 
+// Fetch API - GET all courses:
 function getAllCourses() {
-	// Fetch API:
 	fetch("https://lilms.iran.liara.run/courses/")
 		.then((response) => response.json())
 		.then((data) => {
-            console.log(data);
 			data.forEach((course) => {
 				table.insertAdjacentHTML(
 					"beforeend",
@@ -64,10 +63,12 @@ function getAllCourses() {
 		});
 }
 
+// LoadPage GET Request:
 window.addEventListener("load", () => {
 	getAllCourses();
 });
 
+// RefreshButton GET Request:
 refreshButton.addEventListener("click", () => {
     console.log('click');
     table.innerHTML = ''
