@@ -1,11 +1,8 @@
-console.log("run");
-
 // Variables:
 const barsBtn = document.querySelector(".navbar__right-icon-container");
 const menu = document.querySelector(".navbar__right-links");
 const checkboxContainer = document.querySelectorAll(".tables__table-checkbox");
-
-console.log(menu);
+const table = document.querySelector(".tables__table-body");
 
 // Responsive Bars Icon:
 barsBtn.addEventListener("click", () => {
@@ -24,9 +21,41 @@ checkboxContainer.forEach((e) => {
 	});
 });
 
-console.log("run");
-
 // Fetch API:
-fetch("http://127.0.0.1:8000/courses/")
+fetch("https://lilms.iran.liara.run/courses/")
 	.then((response) => response.json())
-	.then((data) => console.log(data));
+	.then((data) => {
+		data.forEach((course) => {
+			table.insertAdjacentHTML(
+				"beforeend",
+				`
+            <tr class="tables__table-row">
+                <td class="tables__table-checkbox">
+                    <input class="tables__table-input" type="checkbox" />
+                </td>
+                <td class="tables__table-title">
+                    <span class="tables__table-title-text">${course.name}</span>
+                </td>
+                <td class="tables__table-code">
+                    <span class="tables__table-code-text">${course.code}</span>
+                </td>
+                <td class="tables__table-group">
+                    <span class="tables__table-group-text">${course.group}</span>
+                </td>
+                <td class="tables__table-teacher">
+                    <span class="tables__table-teacher-text">${course.teacher}</span>
+                </td>
+                <td class="tables__table-time1">
+                    <span class="tables__table-time1-text">${course.class_times[0].day}[${course.class_times[0].end_time}-${course.class_times[0].start_time}]</span>
+            </td>
+            <td class="tables__table-time2">
+                <span class="tables__table-time2-text">${course.class_times[1].day}[${course.class_times[1].end_time}-${course.class_times[1].start_time}]</span>
+            </td>
+            <td class="tables__table-exam">
+                <span class="tables__table-exam-text">${course.exam_time.day}[${course.exam_time.start_time}0-${course.exam_time.end_time}0]</span>
+            </td>
+        </tr>
+            `
+			);
+		});
+	});

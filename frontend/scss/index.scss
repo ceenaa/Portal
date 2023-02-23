@@ -5,4 +5,26 @@
 @import "header";
 @import "table";
 
+.refresh {
+    margin-bottom: 1rem;
+
+    .refresh__btn {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .refresh__btn-icon {
+            cursor: pointer;
+            font-size: 2rem;
+            padding: 1rem 1rem;
+
+            &:hover {
+                color: $link-hover;
+                transition: all .2s linear;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+}
+
 // sass --watch scss/index.scss css/index.css

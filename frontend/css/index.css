@@ -176,6 +176,7 @@ html body i {
 
 .tables {
   margin: 0 2rem;
+  box-shadow: 0px 100px 2000px rgba(30, 131, 240, 0.3254901961);
 }
 .tables .tables__table {
   width: 100%;
@@ -202,11 +203,29 @@ html body i {
 }
 .tables .tables__table .tables__table-row .tables__table-checkbox {
   padding: 1rem;
+  cursor: pointer;
 }
 .tables .tables__table .tables__table-row .tables__table-checkbox .tables__table-input {
   margin: 0 auto;
-  cursor: pointer;
 }
 /* Finish Table Styles */
+.refresh {
+  margin-bottom: 1rem;
+}
+.refresh .refresh__btn {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.refresh .refresh__btn .refresh__btn-icon {
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 1rem 1rem;
+}
+.refresh .refresh__btn .refresh__btn-icon:hover {
+  color: #1e83f0;
+  transition: all 0.2s linear;
+  transform: rotate(-45deg);
+}
 
 /*# sourceMappingURL=index.css.map */
