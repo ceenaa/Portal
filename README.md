@@ -26,7 +26,7 @@ python3 manage.py runserver
 
 ## Tech Stack
 
-**Client:** Html, Css, Js, jQuery, loadash, Swipper, Bootstrap
+**Client:** Html, Css, Js, Sass, ParticleJs, ...
 
 **Server:** Python, Django, Restframework
 
