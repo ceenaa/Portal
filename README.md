@@ -11,7 +11,7 @@ Automatically crawl to `EducationalPortal.html` file and dynamically create cour
 First you need to setup requirements of the project. <br/>
 you can easily install all the requirements of the project by run this command in backend directory. <br/>
 ```
-$ pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 
